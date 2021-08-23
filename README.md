@@ -21,3 +21,6 @@ Current goals for this project:
 - fundamentals data (PEG, etc) and larger market data (S&P500, Dow Jones)
 - algorithm for comparing stock's performance to market trends (overvalued or undervalued?)
 - massive disclaimer that the algorithm is made by an amateur and will not beat the market
+
+
+A small note: the code originally contained my personal API key before I realized the repo was public. The original repo was changed but just to be sure I deleted it (better safe than sorry). You can get a free API key from the Alpha Vantage website and paste it wherever the app requires it.
