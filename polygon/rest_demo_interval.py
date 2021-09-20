@@ -21,7 +21,7 @@ def main():
 
 
 def get_data(key: str, ticker: str, start_date: str, end_date: str, output_path: str, interval: str = "minute"):
-    """Given an API key, ticker symbol, start date, end date, output filepath, and optional interval, returns aggregate data."""
+    """Given an API key, ticker symbol, start date, end date, output filepath, and optional interval, writes aggregate data to txt file."""
     # RESTClient can be used as a context manager to facilitate closing the underlying http session
 # https://requests.readthedocs.io/en/master/user/advanced/#session-objects
     with RESTClient(key) as client:

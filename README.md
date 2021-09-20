@@ -40,3 +40,9 @@ This means I might have to choose between Alpha Vantage and Polygon.io. I could 
 Here is Polygon.io's [python client](https://github.com/polygon-io/client-python) code. The repo includes example code and generally looks like a great resource.
 
 See more detailed info on Polygon's API [here](./POLYGON.md). Polygon does not offer real-time data at the free level. It appears that data, like freedom, doesn't come cheap. Back to the drawing board.
+
+## Updated goals:
+- Use the Polygon API for faster get times and better data
+- read data as a JSON file, not a txt file
+- Implement a GUI with an easy-to-use layout
+- Integrate matplotlib or pandas to display data
