@@ -1,3 +1,4 @@
+
 # stock-app
 
 Hello! This is a simple stock app I created to practice using APIs and to familiarize myself with the JSON data format.
@@ -34,6 +35,8 @@ I got a Kraken account and there is a place to get an API key. Maybe I could use
 ### Update 3: AlphaVantage does not offer real-time data
 Apparently Alpha Vantage recently changed their API to no longer support current, real-time data reports. More info can be found at [this thread](https://stackoverflow.com/questions/59578028/get-realtime-stock-price-from-alphavantage). Alpha Vantage is also directing people who want real-time data to another site, [Polygon.io](https://polygon.io/).
 
-This means I might have to choose between Alpha Vantage and Polygon.io. I could use Alpha Vantage for making long-term graphs and identifying trends and Polygon for getting real-time data. Pricing may also be an obstacle.
+This means I might have to choose between Alpha Vantage and Polygon.io. I could use Alpha Vantage for making long-term graphs and identifying trends ~~and Polygon for getting real-time data. Pricing may also be an obstacle.~~
 
 Here is Polygon.io's [python client](https://github.com/polygon-io/client-python) code. The repo includes example code and generally looks like a great resource.
+
+See more detailed info on Polygon's API [here](./POLYGON.md). Polygon does not offer real-time data at the free level. It appears that data, like freedom, doesn't come cheap. Back to the drawing board.
