@@ -1,3 +1,5 @@
+"""Demo of polygon.io REST API interface with daily data."""
+
 from polygon import RESTClient
 import datetime
 from datetime import timedelta
@@ -21,7 +23,5 @@ def main():
         print(f"On: {resp2.from_} Apple opened at {resp2.open} and closed at {resp2.close}")
 
 
-
 if __name__ == '__main__':
     main()
-
