@@ -13,3 +13,5 @@ I'm a little worried that this will constantly notify me of events and eventuall
 > Access to different feeds varies depending on your subscription. These docs are customized to your version of the API and display your key and data, which only you can see. These docs demonstrate using WebSocket to interact with the API using standardized protocols over TCP.
 
 Big brain stuff. It looks like Polygon offers more options but is a bit harder to use. Either way I'll only be getting historical data, which is only good for past analysis anyway.
+
+Polygon also offers a RESTful API that uses HTTPS and returns JSON data. Similar to the WebSocket API but sounds a bit easier to work with.
