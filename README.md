@@ -30,3 +30,8 @@ While looking around for a good framework I found PyQt5. It looks pretty well-su
 
 ### Update 2: I got a crypto account
 I got a Kraken account and there is a place to get an API key. Maybe I could use this for that push notification idea I had earlier? Perhaps I could use Kraken's API with this app to get better crypto data than what Alpha Vantage offers.
+
+### Update 3: AlphaVantage does not offer real-time data
+Apparently Alpha Vantage recently changed their API to no longer support current, real-time data reports. More info can be found at [this thread](https://stackoverflow.com/questions/59578028/get-realtime-stock-price-from-alphavantage). Alpha Vantage is also directing people who want real-time data to another site, [Polygon.io](https://polygon.io/).
+
+This means I might have to choose between Alpha Vantage and Polygon.io. I could use Alpha Vantage for making long-term graphs and identifying trends and Polygon for getting real-time data. Pricing may also be an obstacle.
