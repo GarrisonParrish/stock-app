@@ -1,8 +1,9 @@
 """Demo of polygon.io REST API interface with aggregate data."""
 
 import datetime
-
+import json
 from polygon import RESTClient
+from polygon import rest
 
 
 def ts_to_datetime(ts) -> str:
@@ -23,21 +24,28 @@ def main():
 def get_data(key: str, ticker: str, start_date: str, end_date: str, output_path: str, interval: str = "minute"):
     """Given an API key, ticker symbol, start date, end date, output filepath, and optional interval, writes aggregate data to txt file."""
     # RESTClient can be used as a context manager to facilitate closing the underlying http session
-# https://requests.readthedocs.io/en/master/user/advanced/#session-objects
+    # https://requests.readthedocs.io/en/master/user/advanced/#session-objects
     with RESTClient(key) as client:
         resp = client.stocks_equities_aggregates(ticker, 1, interval, start_date, end_date, unadjusted=False)
 
         print(f"Minute aggregates for {resp.ticker} between {start_date} and {end_date}.")
 
-        with open(output_path, "a") as f:
+        f = open(output_path, "a")
+        output_2_path: str = f"/Users/garrisonparrish/Python Applications/stock-app/data/output2:{ticker}:{start_date}:{end_date}.json"
+        j = open(output_path, "a")
 
-            for result in resp.results:
-                dt = ts_to_datetime(result["t"])
-                output_line: str = f"{dt}\n\tO: {result['o']}\n\tH: {result['h']}\n\tL: {result['l']}\n\tC: {result['c']} "
-                print(output_line) 
-                f.write(output_line + '\n')
+        json.dump(resp.results, j)
 
-    f.close()
+        for result in resp:
+            dt = ts_to_datetime(result["t"])
+            output_line: str = f"{dt}\n\tO: {result['o']}\n\tH: {result['h']}\n\tL: {result['l']}\n\tC: {result['c']} "
+            print(output_line)
+            f.write(output_line + '\n')
+        
+        f.close()
+        j.close()
+
+    return output_line
 
 
 if __name__ == '__main__':
