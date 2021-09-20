@@ -35,7 +35,7 @@ def get_data(key: str, ticker: str, start_date: str, end_date: str, output_path:
                 dt = ts_to_datetime(result["t"])
                 output_line: str = f"{dt}\n\tO: {result['o']}\n\tH: {result['h']}\n\tL: {result['l']}\n\tC: {result['c']} "
                 print(output_line) 
-                f.write(output_line)
+                f.write(output_line + '\n')
 
     f.close()
 
